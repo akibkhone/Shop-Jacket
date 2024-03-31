@@ -70,12 +70,21 @@ nav i {
 #cart {
 	display: flex;
 	justify-content: space-between;
-}
-
-#cart,
-#center-bottom-right h5:not(:first-child) {
 	border-top: 2px solid black;
 	padding: 0.4rem 0;
+	cursor: pointer;
+}
+
+#cart i {
+	opacity: 0;
+}
+
+#cart:hover i {
+	opacity: 100;
+}
+
+#cart:hover h5 {
+	text-decoration: underline;
 }
 
 footer {
@@ -101,7 +110,6 @@ footer img {
 
 	#center {
 		width: 100%;
-		height: 45vh;
 		padding: 1rem 2rem;
 	}
 
@@ -125,6 +133,65 @@ footer img {
 	#center-bottom-right h5:not(:first-child) {
 		border-top: 1px solid black;
 		padding: 0.3rem 0;
+	}
+
+	footer {
+		position: fixed;
+		width: 100%;
+		max-height: 50vh;
+		overflow: hidden;
+	}
+
+	footer img {
+		bottom: 0;
+		width: 100%;
+		height: 40vh;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav {
+		justify-content: space-around;
+		padding: 0 2rem;
+	}
+
+	#center {
+		padding: 2rem;
+	}
+
+	#center-top {
+		width: 60vw;
+	}
+
+	#center-top h1 {
+		font-size: 1.5em;
+	}
+
+	#center-bottom {
+		flex-direction: column;
+		gap: 2rem;
+		width: 80vw;
+	}
+
+	#center-bottom-left h5 {
+		width: 80vw;
+	}
+
+	#center-bottom-left h5,
+	#center-bottom-right h5 {
+		font-weight: normal;
+	}
+
+	#center-bottom-right {
+		width: 80vw;
+	}
+
+	#cart {
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid black;
+		padding: 0.4rem 0;
+		cursor: pointer;
 	}
 
 	footer {
